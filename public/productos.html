@@ -210,14 +210,15 @@
                 window.location.href = "/crear-editar-producto.html";
             });
         });
-
-        const deleteButtons = document.querySelectorAll(".act.delete");
-        const deleteModal = document.getElementById("deleteModal");
-        let rowToDelete = null;
         const logout = document.getElementById("logout");
         logout.addEventListener("click", () => {
             window.location.href = "/login.html";
         });
+
+        const deleteButtons = document.querySelectorAll(".act.delete");
+        const deleteModal = document.getElementById("deleteModal");
+        let rowToDelete = null;
+
 
         deleteButtons.forEach(btn => {
             btn.addEventListener("click", () => {
