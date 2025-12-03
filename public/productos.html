@@ -214,6 +214,10 @@
         const deleteButtons = document.querySelectorAll(".act.delete");
         const deleteModal = document.getElementById("deleteModal");
         let rowToDelete = null;
+        const logout = document.getElementById("logout");
+        logout.addEventListener("click", () => {
+            window.location.href = "/login.html";
+        });
 
         deleteButtons.forEach(btn => {
             btn.addEventListener("click", () => {
@@ -224,7 +228,6 @@
 
         deleteModal.addEventListener("close", () => {
             if (deleteModal.returnValue === "confirm") {
-                alert("Producto eliminado correctamente.");
                 if (rowToDelete) rowToDelete.remove();
             }
             rowToDelete = null;

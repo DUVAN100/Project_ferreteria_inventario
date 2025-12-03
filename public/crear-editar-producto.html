@@ -36,7 +36,7 @@
                     <input type="text" placeholder="Buscar">
                 </div>
                 <button class="icon-btn">🔔</button>
-                <button class="icon-btn">👤</button>
+                <button class="icon-btn" id="logout">📲</button>
             </div>
 
         </div>
@@ -110,12 +110,16 @@
         const cancelBtn = document.querySelector(".btn-secondary");
         const modal = document.getElementById("modalProducto");
         const btnModalOk = document.getElementById("btnModalOk");
+        const logout = document.getElementById("logout");
         form.addEventListener("submit", function (e) {
             e.preventDefault();
             modal.classList.remove("hidden");
             modal.classList.add("show");
         });
 
+        logout.addEventListener("click", () => {
+            window.location.href = "/login.html";
+        });
         btnModalOk.addEventListener("click", () => {
             window.location.href = "/productos.html";
         });
