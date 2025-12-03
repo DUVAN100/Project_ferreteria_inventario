@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/dashboard.css">
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="topbar-inner">
+            <div class="brand">
+                <img src="./images/logo.png" alt="logo" class="brand-logo">
+            </div>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="#">Usuarios</a>
+                <a href="/public/productos.html">Productos</a>
+                <a href="#">Compras</a>
+                <a href="#">Ventas</a>
+                <a href="#">Clientes</a>
+                <a href="#">Proveedores</a>
+                <a href="#">Reportes</a>
+                <a href="#">Historial</a>
+                <a href="#">Devoluciones</a>
+            </nav>
+
+            <div class="top-actions">
+                <input class="search" placeholder="Buscar" aria-label="Buscar">
+                <button class="icon-btn" title="Notificaciones">🔔</button>
+                <button class="icon-btn" title="Perfil">👤</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+        <section class="page-header">
+            <h1>Principal</h1>
+        </section>
+
+        <section class="stats">
+            <div class="card stat">
+                <div class="stat-title">Alertas de stock bajo</div>
+                <div class="stat-value warn">5</div>
+            </div>
+
+            <div class="card stat">
+                <div class="stat-title">Ventas diarias</div>
+                <div class="stat-value strong">$300.000</div>
+            </div>
+
+            <div class="card stat">
+                <div class="stat-title">Productos baja rotación</div>
+                <div class="stat-value">3</div>
+            </div>
+        </section>
+
+        <section class="inventory">
+            <h2>Inventario</h2>
+
+            <div class="table-wrap">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Productos</th>
+                            <th>Código</th>
+                            <th>Stock</th>
+                            <th>Stock Mínima</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Alicates xl</td>
+                            <td class="muted">0124</td>
+                            <td>22</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>Martillo con mango de madera</td>
+                            <td class="muted">0457</td>
+                            <td>8</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>Metro</td>
+                            <td class="muted">8754</td>
+                            <td>25</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>Destornillador Estrella</td>
+                            <td class="muted">8987</td>
+                            <td>15</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>Taladro Premium</td>
+                            <td class="muted">7894</td>
+                            <td>15</td>
+                            <td>4</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <div class="floating-alert" id="floatingAlert" role="status" aria-live="polite">
+        <button class="close" id="closeAlert" aria-label="Cerrar alerta">✕</button>
+        <div class="alert-inner">
+            <p class="alert-title">El stock del producto X está muy bajo</p>
+            <blockquote class="alert-note">"El stock del Producto X aumentará en 5 unidades."</blockquote>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('closeAlert').addEventListener('click', function () {
+            document.getElementById('floatingAlert').style.display = 'none';
+        });
+    </script>
+</body>
+
+</html>

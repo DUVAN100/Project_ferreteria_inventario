@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link href="./css/typeIncome.css" rel="stylesheet" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Define tu Tipo de Ingreso</h2>
+
+        <div class="buttons">
+            <button>Ingreso Admin</button>
+            <button>Ingreso Usuario</button>
+        </div>
+    </div>
+    <script>
+        const buttons = document.querySelectorAll(".buttons button");
+        buttons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                window.location.href = "/public/dashboard.html"; 
+            });
+        });
+    </script>
+
+</body>
+
+</html>

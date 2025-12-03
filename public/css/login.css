@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    font-size: 14px;
+}
+
+/* Fondo original */
+.v1_331 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Contenedor del formulario */
+.login-container {
+    width: 400px;
+    padding: 40px 30px;
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 16px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+/* Título */
+.login-container h2 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #111416;
+}
+
+/* Grupo de inputs */
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-size: 15px;
+    font-weight: 500;
+    color: #111416;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #c7d0db;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #313c48;
+    background: #fff;
+}
+
+.input-group input::placeholder {
+    color: #607589;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #1172d3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s ease;
+}
+
+.btn-login:hover {
+    background: #0d5cad;
+}
+
+.forgot-password {
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #607589;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
