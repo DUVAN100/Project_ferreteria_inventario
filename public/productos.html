@@ -33,7 +33,7 @@
             <div class="top-actions">
                 <input class="search" placeholder="Buscar" />
                 <button class="icon-btn">🔔</button>
-                <button class="icon-btn">👤</button>
+                <button class="icon-btn" id="logout">📲</button>
             </div>
         </div>
     </header>
@@ -210,15 +210,14 @@
                 window.location.href = "/crear-editar-producto.html";
             });
         });
-        const logout = document.getElementById("logout");
-        logout.addEventListener("click", () => {
-            window.location.href = "/login.html";
-        });
 
         const deleteButtons = document.querySelectorAll(".act.delete");
         const deleteModal = document.getElementById("deleteModal");
         let rowToDelete = null;
-
+        const logout = document.getElementById("logout");
+        logout.addEventListener("click", () => {
+            window.location.href = "/login.html";
+        });
 
         deleteButtons.forEach(btn => {
             btn.addEventListener("click", () => {
