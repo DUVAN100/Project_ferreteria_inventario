@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Crear / Editar Producto</title>
+    <link rel="stylesheet" href="/css/form-producto.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- TOPBAR -->
+    <header class="topbar">
+        <div class="topbar-inner">
+
+            <div class="brand">
+                <img src="./images/logo.png" class="brand-logo" />
+            </div>
+
+            <nav class="nav">
+                <a href="#">Usuarios</a>
+                <a href="#">Productos</a>
+                <a href="#">Compras</a>
+                <a href="#">Ventas</a>
+                <a href="#">Clientes</a>
+                <a href="#">Proveedores</a>
+                <a href="#">Reportes</a>
+                <a href="#">Historial</a>
+                <a href="#">Devoluciones</a>
+            </nav>
+
+            <div class="top-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Buscar">
+                </div>
+                <button class="icon-btn">🔔</button>
+                <button class="icon-btn">👤</button>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- CONTENIDO -->
+    <main class="container">
+
+        <h1 class="title">Crear/Editar Producto</h1>
+
+        <form class="form">
+
+            <div class="form-group">
+                <label>Nombre del Producto</label>
+                <input type="text" />
+            </div>
+
+            <div class="form-group">
+                <label>Código</label>
+                <input type="text" />
+            </div>
+
+            <div class="form-group">
+                <label>Categoría</label>
+                <input type="text" />
+            </div>
+
+            <div class="form-group">
+                <label>Marca</label>
+                <input type="text" />
+            </div>
+
+            <div class="form-group">
+                <label>Proveedor</label>
+                <input type="text" />
+            </div>
+
+            <div class="form-group">
+                <label>Precio de Compra</label>
+                <input type="number" />
+            </div>
+
+            <div class="form-group">
+                <label>Precio de Venta</label>
+                <input type="number" />
+            </div>
+
+            <div class="form-group">
+                <label>Stock</label>
+                <input type="number" />
+            </div>
+
+            <div class="actions">
+                <button class="btn-primary">Guardar</button>
+                <button class="btn-secondary" type="button">Cancelar</button>
+            </div>
+        </form>
+    </main>
+    <script>
+        document.querySelector(".btn-primary").addEventListener("click", function (e) {
+            e.preventDefault();
+            alert("✅ Evento realizado correctamente");
+            window.location.href = "/productos.html";
+        });
+
+        document.querySelector(".btn-secondary").addEventListener("click", function () {
+            window.location.href = "/productos.html";
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Productos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/productos.css">
+</head>
+
+<body>
+
+    <!-- Topbar (MISMO DEL DASHBOARD) -->
+    <header class="topbar">
+        <div class="topbar-inner">
+            <div class="brand">
+                <img src="./images/logo.png" alt="logo" class="brand-logo">
+            </div>
+
+            <nav class="main-nav">
+                <a href="#">Usuarios</a>
+                <a href="#">Productos</a>
+                <a href="#">Compras</a>
+                <a href="#">Ventas</a>
+                <a href="#">Clientes</a>
+                <a href="#">Proveedores</a>
+                <a href="#">Reportes</a>
+                <a href="#">Historial</a>
+                <a href="#">Devoluciones</a>
+            </nav>
+
+            <div class="top-actions">
+                <input class="search" placeholder="Buscar" />
+                <button class="icon-btn">🔔</button>
+                <button class="icon-btn">👤</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENIDO -->
+    <main class="page">
+
+        <div class="title-row">
+            <h1>Productos</h1>
+            <button class="btn-add">Agregar</button>
+        </div>
+
+        <div class="search-bar">
+            <span class="icon">🔍</span>
+            <input type="text" placeholder="Buscar producto por nombre o ID" />
+        </div>
+
+        <div class="table-wrap">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Categoría</th>
+                        <th>Marca</th>
+                        <th>Stock</th>
+                        <th>Stock Mínimo</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td class="muted">245</td>
+                        <td>Alicates xl</td>
+                        <td>Pinzas</td>
+                        <td>aliquitre</td>
+                        <td>5</td>
+                        <td>3</td>
+                        <td class="actions">
+                            <button class="act edit">✏️</button>
+                            <button class="act delete">🗑️</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="muted">256</td>
+                        <td>Pinzas</td>
+                        <td>Pinzas</td>
+                        <td>derquis</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td class="actions">
+                            <button class="act edit">✏️</button>
+                            <button class="act delete">🗑️</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="muted">687</td>
+                        <td>Destornillador estrella</td>
+                        <td>Destornilladores</td>
+                        <td>dexter</td>
+                        <td>8</td>
+                        <td>6</td>
+                        <td class="actions">
+                            <button class="act edit">✏️</button>
+                            <button class="act delete">🗑️</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="muted">658</td>
+                        <td>Serrucho</td>
+                        <td>Cortes</td>
+                        <td>treler</td>
+                        <td>3</td>
+                        <td>2</td>
+                        <td class="actions">
+                            <button class="act edit">✏️</button>
+                            <button class="act delete">🗑️</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="muted">875</td>
+                        <td>Pintura pinti</td>
+                        <td>Pinturas</td>
+                        <td>pintulin</td>
+                        <td>8</td>
+                        <td>5</td>
+                        <td class="actions">
+                            <button class="act edit">✏️</button>
+                            <button class="act delete">🗑️</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="muted">598</td>
+                        <td>Taladro</td>
+                        <td>fuer tes</td>
+                        <td>duker</td>
+                        <td>7</td>
+                        <td>5</td>
+                        <td class="actions">
+                            <button class="act edit">✏️</button>
+                            <button class="act delete">🗑️</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+    <dialog id="deleteModal">
+        <h2>¿Seguro que deseas eliminar?</h2>
+        <p>Esta acción no se puede deshacer.</p>
+
+        <form method="dialog" class="modal-actions">
+            <button value="cancel" class="cancel">Cancelar</button>
+            <button value="confirm" class="confirm">Eliminar</button>
+        </form>
+    </dialog>
+
+    <style>
+        dialog {
+            border: none;
+            padding: 20px;
+            border-radius: 15px;
+            width: 300px;
+            text-align: center;
+            font-family: "Inter";
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        dialog::backdrop {
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .modal-actions button {
+            padding: 8px 20px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .modal-actions .cancel {
+            background: #ddd;
+        }
+
+        .modal-actions .confirm {
+            background: #d9534f;
+            color: white;
+        }
+    </style>
+
+
+    <script>
+        document.querySelector(".btn-add").addEventListener("click", () => {
+            window.location.href = "/crear-editar-producto.html";
+        });
+
+        const editButtons = document.querySelectorAll(".act.edit");
+        editButtons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                window.location.href = "/crear-editar-producto.html";
+            });
+        });
+
+        const deleteButtons = document.querySelectorAll(".act.delete");
+        const deleteModal = document.getElementById("deleteModal");
+        let rowToDelete = null;
+
+        deleteButtons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                rowToDelete = btn.closest("tr"); // Guarda la fila a borrar
+                deleteModal.showModal(); // Abre modal
+            });
+        });
+
+        deleteModal.addEventListener("close", () => {
+            if (deleteModal.returnValue === "confirm") {
+                alert("Producto eliminado correctamente.");
+                if (rowToDelete) rowToDelete.remove();
+            }
+            rowToDelete = null;
+        });
+    </script>
+
+
+</body>
+
+</html>
